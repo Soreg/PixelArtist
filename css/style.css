@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #232323;
+  background-color: #2d2c2c;
   color: white;
+  font-family: "Arial";
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  font-family: "VT323";
+  font-weight: normal;
+  font-size: 50px;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #FF0000), color-stop(0.20, #FF7F00), color-stop(0.40, #FFFF00), color-stop(0.60, #00FF00), color-stop(0.80, #4747f0), color-stop(1, #8d2cd4));
+  background-image: gradient( linear, left top, right top, color-stop(0, #FF0000), color-stop(0.20, #FF7F00), color-stop(0.40, #FFFF00), color-stop(0.60, #00FF00), color-stop(0.80, #4747f0), color-stop(1, #8d2cd4));
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  max-width: 240px;
 }
 
 .wrapper {
@@ -26,13 +38,30 @@ h1 {
     margin-bottom: 20px;
 }
 
-.pixel {
+.pixelLarge {
     width: 9%;
     background: #FFF;
     padding-bottom: 9%;
     float: left;
     margin: .5%;
     border-radius: 3px;
+    cursor: pointer;
+}
+.pixelMedium {
+    width: 4.7%;
+    background: #FFF;
+    padding-bottom: 4.7%;
+    float: left;
+    margin: 0.5px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.pixelSmall {
+    width: 2.275%;
+    background: #FFF;
+    padding-bottom: 2.275%;
+    float: left;
+    margin: 0.5px;
     cursor: pointer;
 }
 
