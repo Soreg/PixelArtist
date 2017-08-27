@@ -1,8 +1,9 @@
-var colorPicked = "FF0000";
+var colorPicked = "rgb(255, 0, 0)";
 var colors = document.getElementsByClassName("userColor");
 var picker = document.getElementById("colorPicker");
 var pixels = document.getElementsByClassName("pixel");
 var remove = document.querySelector("#remove");
+var drawing = false;
 //console.log(selects.length);
 //alert(window.getComputedStyle(document.getElementById('colorPosition2'),null).getPropertyValue('background'));
 function draw() {
@@ -35,15 +36,12 @@ function draw() {
       }
     }
   }
-
   changeSize();
-
   for (var i = 0; i < colors.length; i++) {
     colors[i].addEventListener('click', function() {
       colorPicked = window.getComputedStyle(this, null).getPropertyValue("background-color");
     });
   }
-
   for (var i = 0; i < pixels.length; i++) {
     pixels[i].addEventListener('mousedown', function() {
       this.style.backgroundColor = colorPicked;
@@ -60,6 +58,22 @@ function draw() {
   function watchColorPicker(event) {
     colorPicked = picker.value;
   }
+
+  //Draw
+  for (var i = 0; i < pixels.length; i++) {
+    pixels[i].addEventListener("mouseover", function() {
+      if (drawing) {
+        console.log(this);
+        this.style.background = colorPicked;
+      }
+    });
+  }
 }
 
 draw();
+document.body.addEventListener("mousedown", function() {
+  drawing = true;
+})
+document.body.addEventListener("mouseup", function() {
+  drawing = false;
+})
