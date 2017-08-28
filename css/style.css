@@ -74,10 +74,10 @@ h1 {
 }
 
 .userColor {
-  width: 8%;
-  padding-bottom: 8%;
+  width: 50px;
+  height: 50px;
   float: left;
-  margin: .5%;
+  margin: .2%;
   border-radius: 100px;
   cursor: pointer;
   display: block;
@@ -117,7 +117,7 @@ input[type="color"] {
 }
 
 #remove {
-  margin: 40px auto;
+  margin: 90px auto;
   height: 50px;
   line-height: 50px;
   text-align: center;
