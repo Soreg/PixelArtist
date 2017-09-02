@@ -12,6 +12,7 @@ function draw() {
   for (var i = 0; i < colors.length; i++) {
     colors[i].addEventListener("click", selectedColor())
   }
+
   // Change size (number of pixels)
   function changeSize() {
     var val = document.getElementById("pixelSize").value;
@@ -60,13 +61,12 @@ function draw() {
 
  // Removes / resets canvas
   remove.addEventListener('click', function() {
+    remove.style.margin = "40px auto 40px auto";
     for (var i = 0; i < pixels.length; i++) {
       pixels[i].style.backgroundColor = "#FFF";
       customColors.innerHTML = "";
     }
   })
-
-
 
   //Draw
   for (var i = 0; i < pixels.length; i++) {
@@ -95,9 +95,11 @@ function selectedColor() {
     });
   }
 }
+
 // Add customs colors
 addColor.addEventListener("click", function() {
   if (colors.length < 17) {
+    remove.style.margin = "90px auto 30px auto";
     var customColor = document.createElement("div");
     customColor.className = "userColor";
     customColor.style.background = picker.value;

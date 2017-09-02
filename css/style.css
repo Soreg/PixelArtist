@@ -16,18 +16,22 @@ h1 {
   margin: 20px auto;
   font-family: "VT323";
   font-weight: normal;
-  font-size: 50px;
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #FF0000), color-stop(0.20, #FF7F00), color-stop(0.40, #FFFF00), color-stop(0.60, #00FF00), color-stop(0.80, #4747f0), color-stop(1, #8d2cd4));
-  background-image: gradient( linear, left top, right top, color-stop(0, #FF0000), color-stop(0.20, #FF7F00), color-stop(0.40, #FFFF00), color-stop(0.60, #00FF00), color-stop(0.80, #4747f0), color-stop(1, #8d2cd4));
+  font-size: 4rem;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #ff00c6), color-stop(0.166, #733aec), color-stop(0.332, #4d7bf1), color-stop(0.498, #00eaec), color-stop(0.664, #0bb631), color-stop(0.83, #fefc00), color-stop(1, #ff0d00));
+  background-image: gradient( linear, left top, right top, color-stop(0, #ff00c6), color-stop(0.166, #733aec), color-stop(0.332, #5d63e7), color-stop(0.498, #00eaec), color-stop(0.664, #0bb631), color-stop(0.83, #fefc00), color-stop(1, #ff0d00));
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  max-width: 240px;
+  max-width: 298px;
 }
 
 .wrapper {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.smallerSpace {
+  letter-spacing: -10px;
 }
 
 .pixelContainer {
@@ -65,6 +69,14 @@ h1 {
     cursor: pointer;
 }
 
+.mainContainer {
+  position: relative;
+}
+.customsLargeScreen {
+  position: absolute;
+  right: 0;
+  background: red;
+}
 
 .colorsContainer {
   margin: 20px auto;
@@ -115,9 +127,8 @@ h1 {
 input[type="color"] {
   height: 50px;
 }
-
 #remove {
-  margin: 90px auto;
+  margin: 40px auto 40px auto;
   height: 50px;
   line-height: 50px;
   text-align: center;
